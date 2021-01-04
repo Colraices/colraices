@@ -6,6 +6,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "colraices_web",
+    description: `Colraices Colombia`,
+    author: `@colraices`,
   },
   plugins: [
     "gatsby-plugin-sharp",
@@ -16,6 +18,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#3E4691`,
+        display: `minimal-ui`,
         icon: "src/images/icon.png",
       },
     },
@@ -42,5 +50,6 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
       },
     },
+    "gatsby-plugin-sass",
   ],
 };
