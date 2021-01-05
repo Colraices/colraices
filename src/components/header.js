@@ -1,26 +1,34 @@
 import * as React from "react";
 import styled from "styled-components";
 import Image from "../components/image";
-import { Link } from "gatsby"
-
+import { Link } from "gatsby";
 
 import Menu from "./menu";
 
 // markup
 const Header = () => {
   return (
-    <Container>
-      <Logo to="/">
-        <Image name="logo" description="colraices" className="logo" />
-      </Logo>
-      <Menu />
-    </Container>
+    <HeaderContainer>
+      <Container>
+        <Logo to="/">
+          <Image name="logo" description="colraices" className="logo" />
+        </Logo>
+        <Menu />
+      </Container>
+    </HeaderContainer>
   );
 };
 
 export default Header;
 
-const Container = styled.header`
+const HeaderContainer = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+`;
+
+const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
