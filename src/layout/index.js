@@ -20,9 +20,9 @@ const Layout = ({ children }) => {
       <Header />
       <Main>{children}</Main>
       <Aside />
-      <ButtonContainer>
+      <Buttom>
         <ButtomForm onClick={openModal}>Contactanos</ButtomForm>
-      </ButtonContainer>
+      </Buttom>
       <Form showModal={showModal} setShowModal={setShowModal} />
       <Footer />
     </>
@@ -34,14 +34,15 @@ export default Layout;
 const Main = styled.main`
   margin-top: 80px;
 `;
-const ButtonContainer = styled.div`
+const Buttom = styled.aside`
+  z-index: 40;
+  width: 76px;
+  height: 100%;
+  min-height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100%;
   display: flex;
   align-items: center;
-  width: 76px;
 `;
 
 const ButtomForm = styled.button`

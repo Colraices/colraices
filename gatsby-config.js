@@ -8,6 +8,7 @@ module.exports = {
     title: "colraices_web",
     description: `Colraices Colombia`,
     author: `@colraices`,
+    siteUrl: "https://colraices.com"
   },
   plugins: [
     "gatsby-plugin-sharp",
